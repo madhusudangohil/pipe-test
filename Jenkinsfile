@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'veloteam/node-6.10.3-build-env'
+      image 'appsvc/node'
     }
     
   }
