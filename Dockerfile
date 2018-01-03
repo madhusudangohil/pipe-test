@@ -10,5 +10,7 @@ RUN pip install --upgrade pip
 
 RUN pip install awscli --upgrade --user
 
+RUN export PATH=~/.local/bin:$PATH
+
 RUN useradd jenkins --shell /bin/bash --create-home
 USER jenkins
