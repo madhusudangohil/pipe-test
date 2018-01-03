@@ -8,7 +8,7 @@ pipeline {
         sh 'node --version'
         sh 'uname -a'
         sh 'zip -help'
-        sh 'aws lambda list-functions --region us-west-2'
+        sh 'aws --version'
       }
     }
   }
