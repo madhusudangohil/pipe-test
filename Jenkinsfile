@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh 'node --version'
         sh 'uname -a'
-        sh 'apt-get update'
+        sh 'sudo -s'
       }
     }
   }
