@@ -8,9 +8,9 @@ RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 # RUN apt-get install -y python3-pip python-dev build-essential
 
-RUN pip install --upgrade pip
+RUN pip3 install --upgrade pip3
 
-RUN pip install awscli --upgrade --user
+RUN pip3 install awscli --upgrade --user
 
 RUN export PATH=~/.local/bin:$PATH
 
