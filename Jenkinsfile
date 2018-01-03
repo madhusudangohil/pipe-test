@@ -6,8 +6,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'node --version'
-        sh 'uname -a'
-        sh 'sudo -s'
+        sh 'uname -a'        
       }
     }
   }
