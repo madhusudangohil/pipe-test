@@ -4,7 +4,9 @@ FROM node:6.10.3
 RUN apt-get update && apt-get install -y zip
 
 # RUN apt-get install -y awscli
-RUN apt-get install -y python-pip python-dev build-essential
+RUN apt-get install -Y python3
+RUN apt-get install -y python3-pip
+# RUN apt-get install -y python3-pip python-dev build-essential
 
 RUN pip install --upgrade pip
 
