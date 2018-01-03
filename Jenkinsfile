@@ -7,7 +7,7 @@ pipeline {
       steps {
         sh 'node --version'
         sh 'uname -a'
-        sh 'zip'
+        sh 'zip -help'
       }
     }
   }
