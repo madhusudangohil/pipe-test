@@ -9,7 +9,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'node --version'
-        sh 'sudo apt install zip'
+        sh 'zip'
       }
     }
   }
