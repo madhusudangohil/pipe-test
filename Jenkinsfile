@@ -9,7 +9,7 @@ pipeline {
         sh 'uname -a'
         sh 'zip -help'
         sh 'pip --version'
-        sh 'aws --version'
+        sh 'which aws'
       }
     }
   }
