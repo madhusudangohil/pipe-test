@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'lambci/lambda'
+      image 'veloteam/node-6.10.3-build-env'
     }
     
   }
