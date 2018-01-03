@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'appsvc/node'
+      image 'node:6.10'
     }
     
   }
