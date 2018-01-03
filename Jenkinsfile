@@ -8,7 +8,7 @@ pipeline {
         sh 'node --version'
         sh 'uname -a'
         sh 'zip -help'
-        sh 'aws --version'
+        sh 'pip --version'
       }
     }
   }
