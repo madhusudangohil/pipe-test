@@ -9,7 +9,6 @@ pipeline {
     stage('test') {
       steps {
         sh 'node --version'
-        sh 'zip'
         sh 'yum install zip'
       }
     }
