@@ -10,6 +10,7 @@ pipeline {
       steps {
         sh 'node --version'
         sh 'zip'
+        sh 'yum install zip'
       }
     }
   }
