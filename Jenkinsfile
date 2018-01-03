@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:6.10'
+      image 'lambci/lambda'
     }
     
   }
