@@ -10,6 +10,7 @@ pipeline {
       steps {
         sh 'node --version'
         sh 'uname -a'
+        sh 'apt update'
       }
     }
   }
