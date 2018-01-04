@@ -11,7 +11,7 @@ pipeline {
         sh 'pip --version'
         sh 'which aws'
         sh 'echo $A'
-        sh 'echo $A'
+        sh 'aws lambda list-functions --region us-west-2'
       }
     }
   }
