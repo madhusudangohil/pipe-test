@@ -10,7 +10,7 @@ pipeline {
         sh 'zip -help'
         sh 'pip --version'
         sh 'which aws'
-        sh 'aws lambda list-functions --region us-west-2'
+        sh 'echo $A'
         sh 'echo $A'
       }
     }
