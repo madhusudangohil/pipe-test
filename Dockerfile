@@ -17,5 +17,9 @@ RUN export PATH=~/.local/bin:$PATH
 RUN export AWS_ACCESS_KEY_ID=$AWSAccessKeyId
 RUN export AWS_SECRET_ACCESS_KEY=$AWSSecretKey
 
+RUN aws configure set aws_access_key_id $AWSAccessKeyId
+RUN aws configure set aws_secret_access_key $AWSSecretKey
+RUN aws configure set default.region us-west-2
+
 RUN useradd jenkins --shell /bin/bash --create-home
 USER jenkins
