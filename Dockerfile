@@ -16,5 +16,3 @@ RUN export PATH=~/.local/bin:$PATH
 
 RUN useradd jenkins --shell /bin/bash --create-home
 USER jenkins
-
-CMD /bin/bash
