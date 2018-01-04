@@ -10,9 +10,11 @@ RUN apt-get install -y python3-pip
 
 RUN pip3 install --upgrade pip
 
-RUN pip3 install awscli --upgrade --user
+RUN pip3 install awscli
 
 RUN export PATH=~/.local/bin:$PATH
 
 RUN useradd jenkins --shell /bin/bash --create-home
 USER jenkins
+
+CMD /bin/bash
