@@ -10,10 +10,6 @@ RUN apt-get install -y python3-pip
 
 RUN pip3 install --upgrade pip
 
-ENV AWS_DEFAULT_REGION='us-west-2'
-ENV AWS_ACCESS_KEY_ID=$AWSAccessKeyId
-ENV AWS_SECRET_ACCESS_KEY=$AWSSecretKey
-
 RUN pip3 install awscli
 
 RUN export PATH=~/.local/bin:$PATH
