@@ -14,5 +14,8 @@ RUN pip3 install awscli
 
 RUN export PATH=~/.local/bin:$PATH
 
+RUN export AWS_ACCESS_KEY_ID=$AWSAccessKeyId
+RUN export AWS_SECRET_ACCESS_KEY=$AWSSecretKey
+
 RUN useradd jenkins --shell /bin/bash --create-home
 USER jenkins
