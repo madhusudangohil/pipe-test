@@ -16,11 +16,8 @@ pipeline {
     }
     stage('check') {
       steps {
-        CF_STACK_STATUS = sh (
-    script: "aws cloudformation describe-stacks --stack-name conditional-resource --query Stacks[].StackStatus --output text"',
-    returnStdout: true
-        ).trim()
-echo "Cloud formation template : ${CF_STACK_STATUS}"'''
+            def ret = sh(script: 'uname', returnStdout: true)
+            println ret
         }
       }
     }
