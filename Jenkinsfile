@@ -26,9 +26,9 @@ pipeline {
     stage('delete stack') {
       echo "${status}" 
       when {
-        expression { status != 'CREATE_COMPLETE' }
+        expression { ${status} == 'CREATE_COMPLETE' }
       }
-      steps {
+      steps {        
         echo "deleting: ${status}"
       }
     }
