@@ -26,7 +26,7 @@ pipeline {
     stage('delete stack') {
       
       when {
-        expression { ${status} == 'CREATE_COMPLETE' }
+        expression { return readFile('pom.xml').contains('CREATE_COMPLETE') }
       }
       steps {        
         echo "deleting: ${status}"
