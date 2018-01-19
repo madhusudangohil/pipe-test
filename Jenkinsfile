@@ -17,7 +17,10 @@ pipeline {
     stage('check') {
        steps {
             sh 'aws cloudformation describe-stacks --stack-name conditional-resource --region us-west-2 --query Stacks[].StackStatus --output text > status.txt'            
-            sh 'echo readFile(\'status.txt\')'
+         script { 
+           status = readFile('status.txt')
+           echo "${status}" 
+         }
        }
       }
     }
