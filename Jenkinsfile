@@ -16,8 +16,8 @@ pipeline {
     }
     stage('check') {
        steps {
-            ret = sh(script: 'uname', returnStdout: true)
-            
+            sh 'aws cloudformation describe-stacks --stack-name conditional-resource --query Stacks[].StackStatus --output text > status.txt'            
+            sh 'echo readFile(\'status.txt\')'
        }
       }
     }
