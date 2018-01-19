@@ -16,10 +16,10 @@ pipeline {
     }
     stage('check') {
       steps {
-        sh '''CF_STACK_STATUS = sh (
-    script: \'aws cloudformation describe-stacks --stack-name conditional-resource --query Stacks[].StackStatus --output text\',
+        CF_STACK_STATUS = sh (
+    script: "aws cloudformation describe-stacks --stack-name conditional-resource --query Stacks[].StackStatus --output text"',
     returnStdout: true
-).trim()
+        ).trim()
 echo "Cloud formation template : ${CF_STACK_STATUS}"'''
         }
       }
