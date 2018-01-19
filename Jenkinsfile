@@ -14,5 +14,14 @@ pipeline {
         sh 'aws lambda list-functions --region us-west-2'
       }
     }
+    stage('check') {
+      steps {
+        sh '''CF_STACK_STATUS = sh (
+    script: \'aws cloudformation describe-stacks --stack-name conditional-resource --query Stacks[].StackStatus --output text\',
+    returnStdout: true
+).trim()
+echo "Cloud formation template : ${CF_STACK_STATUS}"'''
+        }
+      }
+    }
   }
-}
