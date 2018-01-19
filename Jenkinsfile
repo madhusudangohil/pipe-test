@@ -15,10 +15,10 @@ pipeline {
       }
     }
     stage('check') {
-      steps {
+      
             def ret = sh(script: 'uname', returnStdout: true)
             println ret
-        }
+        
       }
     }
   }
