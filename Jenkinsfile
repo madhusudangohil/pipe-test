@@ -14,7 +14,7 @@ pipeline {
         sh 'aws lambda list-functions --region us-west-2'
       }
     }
-    stage('check') {
+    stage('check stack') {
        steps {
             sh 'aws cloudformation describe-stacks --stack-name conditional-resource --region us-west-2 --query Stacks[].StackStatus --output text > status.txt'            
          script { 
@@ -23,5 +23,13 @@ pipeline {
          }
        }
       }
+    stage('delete stack') {
+      when {
+        expression { status != 'CREATE_COMPLETE' }
+      }
+      steps {
+        echo "deleting: ${status}"
+      }
+    }
     }
   }
